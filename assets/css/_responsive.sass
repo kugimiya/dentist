@@ -1,0 +1,29 @@
+@media screen and (max-width: 600px)
+  .mobile
+    &-hidden
+      display: none!important
+    &-flex
+      display: flex
+
+  .header__menu
+    display: none!important
+    flex-direction: column
+  .menu-icon
+    //display: block
+    width: 48px
+    height: 48px
+    background: var(--main-color)
+
+  .top__title
+    font-size: 1rem
+  .site-title
+    font-size: 5rem
+    margin: 0 auto
+
+
+@media screen and (min-width: 1024px)
+  .mobile
+    &-visible
+      display: none
+    &-flex
+      display: none
