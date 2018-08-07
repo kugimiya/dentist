@@ -1,6 +1,6 @@
 @import "normalize"
 @import "variables"
-
+@import url('https://fonts.googleapis.com/css?family=Roboto')
 .container
   width: var(--container-width)
   max-width: 100%
@@ -8,7 +8,8 @@
   padding-left: var(--container-padding)
   padding-right: var(--container-padding)
 
-
+html
+  font-family: var(--main-font, sans-serif)
 
 body
   margin: 0
@@ -38,6 +39,12 @@ ul,li
     margin: 0 auto 0 0
     //max-width: 150px
     color: grey
+    &-mobile
+      text-align: right
+      margin-right: auto
+      color: lightgrey
+      font-size: 1.25rem
+      padding-left: 5px
 .phone
   &-list
     display: flex
@@ -53,7 +60,7 @@ ul,li
 
 .menu
   //width: 100%
-  display: flex
+  display: var(--header-menu-display)
   justify-content: space-between
   border-top: 2px solid var(--main-color)
   &__element
@@ -91,16 +98,22 @@ ul,li
     margin: 20px 15px 20px auto
     padding: 25px
     max-width: 100%
+    align-items: center
   &__title
     text-align: center
     font-size: 2.25rem
     color: white
-    margin-bottom: 10px
+    margin-bottom: 25px
   &__input
     margin-bottom: 25px
     width: 350px
     max-width: 100%
     padding: 8px
+  &__submit
+    width: 175px
+    padding: 8px 5px
+    border-radius: .25rem
+    border: none
 
 .services
   &__list
@@ -108,9 +121,16 @@ ul,li
     display: grid
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr))
     grid-gap: 35px
+    background: #e8ebf1
+  &__icon
+    width: 120px
+    max-width: 100%
+    height: 80px
+    margin-top: 10px
+    margin-bottom: 20px
   &__title
     text-align: center
-    font-weight: bold
+    //font-weight: bold
     margin-bottom: 20px
     font-size: 1.15rem
   &__text
