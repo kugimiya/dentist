@@ -1,6 +1,7 @@
 @import "normalize"
 @import "variables"
 @import url('https://fonts.googleapis.com/css?family=Roboto')
+
 .container
   width: var(--container-width)
   max-width: 100%
@@ -26,25 +27,29 @@ ul,li
     display: grid
     grid-template-columns: 2fr 1fr
     margin-bottom: 8px
+
   &__list
     display: flex
     flex-wrap: wrap
+
   &__address
     font-size: 2rem
     width: 100%
     margin: 0
+
   &__working-time
     padding-left: 0
     text-align: right
     margin: 0 auto 0 0
-    //max-width: 150px
     color: grey
+
     &-mobile
       text-align: right
       margin-right: auto
       color: lightgrey
       font-size: 1.25rem
       padding-left: 5px
+
 .phone
   &-list
     display: flex
@@ -59,20 +64,22 @@ ul,li
     text-align: right
 
 .menu
-  //width: 100%
   display: var(--header-menu-display)
   justify-content: space-between
   border-top: 2px solid var(--main-color)
+
   &__element
     text-decoration: none
     font-size: 2rem
     color: var(--main-color)
+
 .mobile-menu__header
   justify-content: space-between
 
 .title-form
   width: 100%
   background: #4e526f
+
   &__wrapper
     display: flex
     flex-wrap: wrap
@@ -83,6 +90,7 @@ ul,li
   color: white
   margin-bottom: 0
   text-align: center
+
 .site-title
   font-size: 7rem
   color: white
@@ -99,16 +107,19 @@ ul,li
     padding: 25px
     max-width: 100%
     align-items: center
+
   &__title
     text-align: center
     font-size: 2.25rem
     color: white
     margin-bottom: 25px
+
   &__input
     margin-bottom: 25px
     width: 350px
     max-width: 100%
     padding: 8px
+
   &__submit
     width: 175px
     padding: 8px 5px
@@ -122,17 +133,19 @@ ul,li
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr))
     grid-gap: 35px
     background: #e8ebf1
+
   &__icon
     width: 120px
     max-width: 100%
     height: 80px
     margin-top: 10px
     margin-bottom: 20px
+
   &__title
     text-align: center
-    //font-weight: bold
     margin-bottom: 20px
     font-size: 1.15rem
+
   &__text
     font-size: 1.15rem
 
