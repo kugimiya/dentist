@@ -1,16 +1,18 @@
-var root = document.querySelector(':root');
-var rootStyles = getComputedStyle(root);
-var mainColor = rootStyles.getPropertyValue('--header-menu-display');
+(function (w) {
 
-console.log(mainColor); // '#ffeead'
-console.log(rootStyles); // '#ffeead'
+var root       = document.querySelector(':root'),
+    rootStyles = getComputedStyle(root),
+    mainColor  = rootStyles.getPropertyValue('--header-menu-display');
 
-function toggleMenu() {
-  var showHeaderMenu = rootStyles.getPropertyValue('--header-menu-display');
-  console.log(showHeaderMenu);
-  if (showHeaderMenu =='none'){
-    root.style.setProperty('--header-menu-display','flex');
-  }else{
-    root.style.setProperty('--header-menu-display','none');
+w.toggleMenu = function toggleMenu () {
+
+  if (mainColor === 'none') {
+    root.style.setProperty('--header-menu-display', 'flex');
+  } else {
+    root.style.setProperty('--header-menu-display', 'none');
   }
+
 }
+
+
+})(window);
